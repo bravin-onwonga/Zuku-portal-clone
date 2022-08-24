@@ -1,0 +1,27 @@
+{% extends 'clients/base.html' %}
+{% load static %}
+{% block content %}
+
+<form id="reference" class="form-inline" action="/refer">
+	{% csrf_token %}
+	<div class="refer__info">
+		<h1>REFER>>Share about our services with friends</h1>
+		<p><b>Please Provide the necessary details in the Spaces provided</b></p>
+		<hr>
+		<div class="form-group">
+		 	<label class = "control-label">Full Names</label>
+			<input class="form-control" type="text" name="Fnames" placeholder="Enter Full Names">
+		</div>
+		<div class="form-group">
+		    <label>Email</label>
+			<input class="form-control" type="text" name="email" placeholder="Enter Email">
+		</div>
+		<div class="form-group">
+		    <label>Phone Number</label>
+		    <input class="form-control" type="number" name="phonenumber" placeholder="Enter Phone Number"><br>
+		</div>
+		<hr>
+		<input id="form-button" class="btn btn-success btn-block" type="submit" value="Submit">
+	</div>
+</form>
+{% endblock content %}

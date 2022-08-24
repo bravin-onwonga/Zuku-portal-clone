@@ -1,0 +1,22 @@
+{% extends 'clients/base.html' %}
+{% load static %}
+{% block content %}
+
+{% if submitted %}
+	Your Request has been submitted successfully!!!
+
+{% else %}
+	<form id ='moving-form' class="form-inline" action="" method = POST>
+		{% csrf_token %}
+		<div class ="moving__info">
+			<h1>MOVING HOUSES</h1>
+			<p>Dear Valued Customer, To begin processing your shifting or moving request, please fill in below details. Your shifting/move request will be processed immediately on receipt of your form. Our customer service team will get back to you to confirm service availability at your new home. <b>This process is free only if your account is active</b>.(Shifting is done within 24hours).</p>
+			<p><b>Please Provide Shifting Details in the Spaces provided</b></p>
+			<hr>
+			{{ form.as_p }}
+			<hr>
+			<input id="form-button" class="btn btn-success btn-block" type="submit" value="Submit">
+		</div>
+	</form>
+{% endif %}
+{% endblock content %}

@@ -1,0 +1,40 @@
+{% extends 'clients/base.html' %}
+{% load static %}
+{% block content %}
+
+{% if submitted %}
+	Your Request has been submitted successfully!!!
+
+{% else %}
+	<h1>CHANGE YOUR PACKAGE</h1>
+	<p>The packages offered are: <br>Triple pay 10 Mbps at <b>2, 499</b> <br>Triple pay 10 Mbps at <b>3 999</b><br>Triple pay 10 Mbps at <b>4 999</b><br> Enter one of these packages in the field below.</p>
+	<form id ='change-package' class="form-inline" action="" method = POST>
+		{% csrf_token %}
+		<basic-form>
+			<div class="form-group">
+			 	<label class = "control-label">Account</label>
+				<input class="form-control" type="text" name="acc" placeholder="Enter Your Account">
+			</div>
+			<div class="form-group">
+				<label>Email</label>
+				<input class="form-control" type="text" name="email" placeholder="Enter Email">
+			</div>
+			<div class="form-group">
+				<label>Package Type</label>
+				<input class="form-control" type="text" name="package" placeholder="Enter package you want"><br>
+			</div>
+				<hr>
+				<input id="form-button" class="btn btn-success btn-block" type="submit" value="Submit">
+			</div>
+		</basic-form>
+	</form>
+	<script>
+	  const form = document.getElementById("change-package");
+	  const basicForm = form.querySelector('basic-form');
+	  const onSubmit = (event) => {
+	    console.log(basicForm.value);
+	  }
+	  form.addEventListener('submit', onSubmit);
+	</script>
+{% endif %}
+{% endblock content %}

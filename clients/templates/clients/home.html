@@ -1,0 +1,81 @@
+{% extends 'clients/base.html' %}
+{% load static %}
+{% block content %}
+
+<body>
+	<div class = "cards">
+		<div class = "card">
+			<div class="card__info">
+				<div>
+					<img id="lorry-icon" src = "{% static 'images/lorry.png' %}">
+				</div>
+				<div>
+					<u>MOVING HOUSES</u>
+				</div>
+			</div>
+			<div class="card__content">
+				<i class='fas fa-share'></i>
+				<a href="{% url 'moving' %}" class="card__link">Make a request</a>
+			</div>
+		</div>
+		<div class = "card">
+			<div class="card__info">
+				<div>
+					<img id="ticket-icon" src = "{% static 'images/ticket.png' %}">
+				</div>
+				<div>
+					<u>TICKETS</u>
+				</div>
+			</div>
+			<div class="card__content">
+				<i class='fas fa-share'></i>
+				<a href="{% url 'ticket' %}"class="card__link">Submit a Ticket</a><br>
+				<i class='fas fa-share'></i>
+				<a href="{% url 'package' %}" class="card__link">Change Package</a>
+			</div>
+		</div>
+		<div class = "card">
+			<div class="card__info">
+				<div>
+					<img id="refer-icon" src = "{% static 'images/refer.jfif' %}">
+				</div>
+				<div>
+					<u>REFER A FRIEND</u>
+				</div>
+			</div>
+			<div class="card__content">
+				<i class='fas fa-share'></i>
+				<a href="{% url 'refer' %}" class="card__link">Fill in Details</a>
+			</div>
+		</div>
+		<div class = "card">
+			<div class="card__info">
+				<div>
+					<img id="store-icon" src = "{% static 'images/store.png' %}">
+				</div>
+				<div>
+					<u>STORE</u>
+				</div>
+			</div>
+			<div class="card__content">
+				<i class='fas fa-share'></i>
+				<a href="{% url 'store' %}" class="card__link">Visit Online Store</a>
+			</div>
+		</div>
+		<div class = "card">
+			<div class="card__info">
+				<div>
+					<img id="settings-icon" src = "{% static 'images/settings.png' %}">
+				</div>
+				<div>
+					<u>SETTINGS</u>
+				</div>
+			</div>
+			<div class="card__content">
+				<i class='fas fa-share'></i>
+				<a href="./" class="card__link">Edit Account</a><br>
+			</div>
+		</div>
+	</div>
+</body>
+{% endblock content %}
