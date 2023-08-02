@@ -7,7 +7,7 @@ import datetime
 from . mpesa_credentials import MpesaAccessToken, LipanaMpesaPpassword
 from django.views.decorators.csrf import csrf_exempt
 from . models import MpesaPayment
-from . forms import ShiftingRequestForm, ChangePackageForm
+from . forms import CheckoutForm, ShiftingRequestForm, ChangePackageForm
 from . models import *
 from django.template.loader import get_template
 from . models import ShippingAddress
@@ -250,9 +250,9 @@ def lipa_na_mpesa_online(request):
         "Timestamp": LipanaMpesaPpassword.lipa_time,
         "TransactionType": "CustomerPayBillOnline",
         "Amount": 1,
-        "PartyA":25471234568  # replace with your phone number to get stk push
+        "PartyA":25474390639,  # replace with your phone number to get stk push
         "PartyB": LipanaMpesaPpassword.Business_short_code,
-        "PhoneNumber": 25471234568,  # replace with your phone number to get stk push
+        "PhoneNumber": 254743909639,  # replace with your phone number to get stk push
         "CallBackURL": "https://sandbox.safaricom.co.ke/mpesa/",
         "AccountReference": "Zuku",
         "TransactionDesc": "Testing stk push"
