@@ -234,8 +234,8 @@ def getAccessToken(request):
 	consumer_secret = 'v0RE5VYb8XsBxA0C'
 	api_URL = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials'
 
-	r = requests.get(api_URL, auth=HTTPBasicAuth(consumer_key, consumer_secret))
-	mpesa_access_token = json.loads(r.text)
+	# r = requests.get(api_URL, auth=HTTPBasicAuth(consumer_key, consumer_secret))
+	mpesa_access_token = "CLoEHrf7gptyAKnbfc9tU5O68MJW" # json.loads(r.text)
 	validated_mpesa_access_token = mpesa_access_token['access_token']
 
 	return HttpResponse(validated_mpesa_access_token)
