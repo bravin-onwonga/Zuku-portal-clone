@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is my final year project where I created a clone for the Zuku self-service portal. I added the online store which was on a separate website as well as creating new modules:
+This is my final year project where I created a clone for the Zuku self-service portal. I added the online store which was on a separate website as well as adding new features:
 - Invite a friend.
 - Change package.
 - Raise a ticket.
